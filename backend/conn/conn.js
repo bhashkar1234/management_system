@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 require("dotenv").config();
 
-const PORT = process.env.PORT || 8002; // Change default port to 8002
+const PORT = process.env.PORT || 8010; // Change default port to 8002
 const MONGODB_URL = process.env.MONGODB_URL;
 
 const conn = async () => {

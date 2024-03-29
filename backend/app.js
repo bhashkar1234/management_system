@@ -16,6 +16,6 @@ app.use("/api/v2", list);
 //   res.sendFile(path.resolve(__dirname, "frontend", "build", "index.html"));
 // });
 
-app.listen(8002, () => {
+app.listen(8010, () => {
   console.log("Server Started");
 });

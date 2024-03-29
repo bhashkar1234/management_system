@@ -35,7 +35,7 @@ const Update = ({ display, update }) => {
       }
   
       const response = await axios.put(
-        `http://localhost:8002/api/v2/updateTask/${update._id}`,
+        `http://localhost:8010/api/v2/updateTask/${update._id}`,
         Inputs
       );
       toast.success(response.data.message);

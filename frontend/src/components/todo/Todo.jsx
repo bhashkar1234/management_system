@@ -39,7 +39,7 @@ const Todo = () => {
     } else {
       try {
         const response = await axios.post(
-          `http://localhost:8002/api/v2/addTask`,
+          `http://localhost:8010/api/v2/addTask`,
           Inputs
         );
         console.log(response);
@@ -55,7 +55,7 @@ const Todo = () => {
 
   const del = async (Cardid) => {
     try {
-      await axios.delete(`http://localhost:8002/api/v2/deleteTask/${Cardid}`, {
+      await axios.delete(`http://localhost:8010/api/v2/deleteTask/${Cardid}`, {
         data: { id: id },
       });
       toast.success("Your Task Is Deleted");
@@ -69,7 +69,7 @@ const Todo = () => {
   const update = async (updatedTask) => {
     try {
       const response = await axios.put(
-        `http://localhost:8002/api/v2/updateTask/${updatedTask._id}`,
+        `http://localhost:8010/api/v2/updateTask/${updatedTask._id}`,
         updatedTask
       );
       console.log("Update Response:", response);
@@ -85,7 +85,7 @@ const Todo = () => {
     try {
       if (id) {
         const response = await axios.get(
-          `http://localhost:8002/api/v2/getTasks/${id}`
+          `http://localhost:8010/api/v2/getTasks/${id}`
         );
         setArray(response.data.tasks);
       }
